@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Court Click - CTC Orders Management Dashboard
+
+A modern admin dashboard for managing Certified True Copy (CTC) court orders.
+
+## Tech Stack
+
+- **Next.js 15** with TypeScript
+- **Ant Design** for UI components
+- **Turbopack** for fast development
+
+## Features
+
+- Orders table with status management
+- Filter by district, court, and product type
+- Assign clerks to orders
+- Tag management system
+- Order details with case, address, and eSign documents
+- E-copy upload support
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
+components/
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+├── Sidebar.tsx          # Navigation sidebar
 
-## Learn More
+├── Header.tsx           # Header with search and filters
 
-To learn more about Next.js, take a look at the following resources:
+├── OrdersTable.tsx      # Main orders table
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+├── OrderTabs.tsx        # Tab navigation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+├── TagModal.tsx         # Tag management
 
-## Deploy on Vercel
+├── AssignClerkModal.tsx # Clerk assignment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+├── AddClerkModal.tsx    # Add new clerk
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+└── ProductFilterModal.tsx # Product filter
+
+## Deployment
+
+Deployed on [Vercel](https://vercel.com) — auto deploys on every push to `main`.
