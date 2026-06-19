@@ -1,7 +1,7 @@
 "use client";
 
 import AssignClerkModal from "./AssignClerkModal";
-import { useState, useEffect } from "react"; // ADDED useEffect
+import { useState, useEffect } from "react"; 
 import { Table, Button, Select, Modal, Tabs } from "antd";
 import TagModal from "./TagModal";
 import {
@@ -177,7 +177,7 @@ const allData = [
   },
 ];
 
-// ADDED: filter event emitter so Header can push filters here
+
 type FilterState = {
   district: string | undefined;
   courtEstablishment: string | undefined;
@@ -233,7 +233,7 @@ export default function OrdersTable() {
   const [viewingRecord, setViewingRecord] = useState<any>(null);
   const [assignOpen, setAssignOpen] = useState(false);
 
-  // ADDED: active filter state
+  //active filter state
   const [activeFilters, setActiveFilters] = useState<FilterState>({
     district: undefined,
     courtEstablishment: undefined,
@@ -241,7 +241,7 @@ export default function OrdersTable() {
     testUsers: true,
   });
 
-  // ADDED: subscribe to filter events from Header
+  //subscribe to filter events from Header
   useEffect(() => {
     filterListeners.push(setActiveFilters);
     return () => {
