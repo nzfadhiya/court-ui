@@ -1,26 +1,112 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: #f5f5f5;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.custom-row td {
+  height: 118px !important;
+  vertical-align: top !important;
+  padding-top: 18px !important;
+}
+
+.ant-table-thead > tr > th {
+  background: #f5f5f5 !important;
+  color: #666 !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+}
+
+.ant-table {
+  border-radius: 16px !important;
+}
+
+.ant-pagination-item-active {
+  background: #5b1f46 !important;
+  border-color: #5b1f46 !important;
+}
+
+.ant-pagination-item-active a {
+  color: #fff !important;
+}
+
+.assign-btn {
+  background: #5b1f46 !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 6px !important;
+}
+
+.action-btn {
+  width: 140px !important;
+  height: 40px !important;
+  border-radius: 8px !important;
+}
+
+.copy-btn {
+  border-radius: 6px !important;
+}
+
+.tag {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.tag-blue {
+  background: #d9e8f3;
+  color: #5f88a5;
+}
+
+.tag-brown {
+  background: #d7c6b5;
+  color: #7a6453;
+}
+
+.tag-yellow {
+  background: #ead38a;
+  color: #8b6b00;
+}
+
+.tag-green {
+  background: #d9e7df;
+  color: #5d8b76;
+}
+
+.status-cancelled {
+  padding: 4px 12px;
+  border-radius: 12px;
+  border: 1px solid #ff7875;
+  color: #f5222d;
+}
+
+.status-placed {
+  padding: 4px 12px;
+  border-radius: 12px;
+  border: 1px solid #95de64;
+  color: #389e0d;
+}
+
+.status-completed {
+  padding: 4px 12px;
+  border-radius: 12px;
+  border: 1px solid #ffd666;
+  color: #d48806;
+}
+.ant-drawer-header {
+  border-bottom: none !important;
+}
+
+.ant-drawer-body {
+  padding: 24px !important;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #6b5475 !important;
+  border-color: #6b5475 !important;
 }
