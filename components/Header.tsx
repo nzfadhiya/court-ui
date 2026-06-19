@@ -42,7 +42,6 @@ export default function Header() {
     setOpen(false);
   };
 
-  // ADDED
   const handleProductFilterApply = (selected: string[]) => {
   setProductFilterSelected(selected);
   const productValue = selected.length === 0 ? "all" : selected[0];
